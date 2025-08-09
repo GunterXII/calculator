@@ -1,0 +1,87 @@
+/* Reset box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Centriamo la calcolatrice nella pagina */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenitore principale */
+.calculator {
+  border: 2px solid #888;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Display */
+#display {
+  background: #222;
+  color: #0f0;
+  font-size: 2rem;
+  text-align: right;
+  padding: 1rem;
+  min-width: 320px;
+  word-wrap: break-word;
+}
+
+/* Griglia dei pulsanti */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Stile di base per tutti i pulsanti */
+.btn {
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  border: 1px solid #888;
+  background: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+/* Effetto “pressione” */
+.btn:active {
+  background: #ccc;
+}
+
+/* Operatori */
+.operator {
+  background: #f7d794;
+}
+.operator:active {
+  background: #f5c16c;
+}
+
+/* Pulsanti speciali */
+#clear, #backspace {
+  background: #e74c3c;
+  color: #fff;
+}
+#clear:active, #backspace:active {
+  background: #c0392b;
+}
+
+/* Pulsante “=” più alto */
+#equals {
+  background: #2ecc71;
+  color: #fff;
+  grid-row: span 2;
+}
+#equals:active {
+  background: #27ae60;
+}
+
+/* Pulsante “0” più largo */
+.zero {
+  grid-column: span 2;
+}
